@@ -20,14 +20,14 @@ if __name__ == '__main__':
         case 1:
             salario = Decimal(input("\nInforme o seu salário:"))
             dias_no_mes = int(input("\nDigite os dias trabalhados no mês: "))
-            calculadora = CalculadoraSalarial(salario, 0, dias_no_mes, 0)
+            calculadora = CalculadoraSalarial(salario,dias_no_mes, 0, 0)
             salarioPorDia = calculadora.calcularSalarioDia()
             print(f"Seu salário por dia é: R${salarioPorDia}")
             
         case 2:
             salario = Decimal(input("\nInforme o seu salário:"))
             horasTrabalhadas = int(input("\nDigite suas horas trabalhadas no mês:"))
-            calculadora = CalculadoraSalarial(salario, horasTrabalhadas, 0, 0)
+            calculadora = CalculadoraSalarial(salario, 0, horasTrabalhadas, 0)
             salarioPorHora = calculadora.calcularSalarioHora()
             print(f"Seu salário por hora é: R${salarioPorHora}")
         
@@ -51,4 +51,5 @@ if __name__ == '__main__':
     
     
     
+
 

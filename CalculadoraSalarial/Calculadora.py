@@ -22,15 +22,15 @@ class CalculadoraSalarial:
         return resultadoSalarioPorDia
       
 
-    def calcularFerias(self):
+    def calcularTercoFerias(self):
 
-        resultadoFerias = self.salario+(self.salario/3)
+        resultadoTercoFerias = self.salario/3 # Calcula o terço de férias
         
-        return resultadoFerias
+        return resultadoTercoFerias
     
 
     def calcularFeriasPorDias(self):
         
-        resultadoFeriasPorDias = self.calcularFerias() / self.feriasPorDias # AJUSTAR O CALCULO POR DIAS 
+        resultadoFeriasPorDias = self.calcularTercoFerias()  + ((self.salario/self.feriasPorDias)*self.feriasPorDias)
         
         return resultadoFeriasPorDias
